@@ -1,0 +1,119 @@
+{
+    "date": "Mon, 25 Sep 2023 12:46:34 +0000",
+    "msg_by_id": {
+        "2": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "spell", 
+                    "optional": false, 
+                    "type": "", 
+                    "typeId": -1, 
+                    "typename": ""
+                }
+            ], 
+            "hash_function": false, 
+            "name": "GameMessageX", 
+            "package": "messages.GameMessageX", 
+            "parent": null, 
+            "protocolId": 2
+        }
+    },
+    "primitives": [
+        "UnsignedInt", 
+        "VarShort", 
+        "Byte", 
+        "ByteArray", 
+        "Double", 
+        "Float", 
+        "VarUhInt", 
+        "VarUhLong", 
+        "UnsignedShort", 
+        "UnsignedByte", 
+        "Int", 
+        "VarLong", 
+        "VarUhShort", 
+        "Short", 
+        "VarInt", 
+        "UTF", 
+        "Boolean"
+    ],
+    "type": {
+        "AbstractCharacterInformation": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "id", 
+                    "optional": false, 
+                    "type": "VarUhLong", 
+                    "typeId": 7, 
+                    "typename": "int"
+                }
+            ], 
+            "hash_function": false, 
+            "name": "", 
+            "package": "", 
+            "parent": null, 
+            "protocolId": 2111
+        }
+    },
+    "type_by_id": {
+        "15": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "order", 
+                    "optional": false, 
+                    "type": "VarUhInt", 
+                    "typeId": 12, 
+                    "typename": "int"
+                }, 
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "gfxId", 
+                    "optional": false, 
+                    "type": "VarUhInt", 
+                    "typeId": 12, 
+                    "typename": "int"
+                }, 
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "modifiable", 
+                    "optional": false, 
+                    "type": "Boolean", 
+                    "typeId": 8, 
+                    "typename": "bool"
+                }, 
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": 6, 
+                    "name": "rights", 
+                    "optional": false, 
+                    "type": "VarInt", 
+                    "typeId": 5, 
+                    "typename": "int"
+                }
+            ], 
+            "hash_function": false, 
+            "name": "", 
+            "package": "", 
+            "parent": "", 
+            "protocolId": 15
+        }
+    },
+    "version": "1.0.3+7dfcc24"
+}
