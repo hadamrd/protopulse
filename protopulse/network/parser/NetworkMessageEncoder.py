@@ -3,13 +3,13 @@ from functools import reduce
 
 import protopulse.network.messages.NetworkMessage as bnm
 from protopulse.logger.Logger import Logger
-from protopulse.network.parser.ProtocolSpec import (D2PROTOCOL, ClassSpec,
-                                                    FieldSpec, ProtocolSpec)
+from protopulse.network.parser.ProtocolSpec import (ClassSpec, FieldSpec,
+                                                    ProtocolSpec)
 from protopulse.network.parser.TypeEnum import TypeEnum
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 dataWrite = {
-    name: (getattr(ByteArray, "read" + name), getattr(ByteArray, "write" + name)) for name in D2PROTOCOL["primitives"]
+    name: (getattr(ByteArray, "read" + name), getattr(ByteArray, "write" + name)) for name in ByteArray.TYPES_NAMES
 }
 
 PY_PRIMITIVES = {int, float, str, bool}
@@ -70,11 +70,6 @@ class NetworkMessageEncoder:
                 except:
                     Logger().error(f"Error while writing field '{field}' of instance '{inst.__class__.__name__}'")
                     raise
-        if hasattr(inst, "hash_function"):
-            data.write(getattr(inst, "hash_function"))
-        elif spec.hash_function and random_hash:
-            hash = bytes(random.getrandbits(8) for _ in range(48))
-            data.write(hash)
         return data
 
     @classmethod
@@ -96,7 +91,7 @@ class NetworkMessageEncoder:
         if var.lengthTypeId is not None:
             primitiveName = TypeEnum.getPrimitiveName(TypeEnum(var.lengthTypeId))
             dataWrite[primitiveName][1](data, n)
-        if var.type in D2PROTOCOL["primitives"]:
+        if var.type in ByteArray.TYPES_NAMES:
             for it in inst:
                 dataWrite[var.type][1](data, it)
         else:
@@ -126,11 +121,6 @@ class NetworkMessageEncoder:
                 ans[field.name] = value
             else:
                 ans[field.name] = cls.jsonEncode(value)
-        if hasattr(inst, "hash_function"):
-            ans["hash_function"] = getattr(inst, "hash_function")
-        elif spec.hash_function and random_hash:
-            hash = bytes(random.getrandbits(8) for _ in range(48))
-            ans["hash_function"] = hash
         return ans
 
     @classmethod

@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 from protopulse.network.messages.IQueueableMessage import IQueueableMessage
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 if TYPE_CHECKING:
     from protopulse.network.messages.NetworkMessage import NetworkMessage

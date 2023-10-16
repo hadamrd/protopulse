@@ -4,7 +4,7 @@ import protopulse.network.parser.NetworkMessageClassDefinition as nmcd
 import protopulse.network.parser.NetworkMessageEncoder as nmencoder
 from protopulse.network.messages.INetworkMessage import INetworkMessage
 from protopulse.network.parser.ProtocolSpec import ClassSpec, ProtocolSpec
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class NetworkMessage(INetworkMessage):

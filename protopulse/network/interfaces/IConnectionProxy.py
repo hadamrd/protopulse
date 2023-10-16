@@ -1,5 +1,5 @@
 from protopulse.network.messages.INetworkMessage import INetworkMessage
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class IConnectionProxy:

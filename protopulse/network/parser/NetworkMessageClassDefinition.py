@@ -6,7 +6,7 @@ import protopulse.network.parser.NetworkMessageDataField as nmdf
 from protopulse.logger.Logger import TraceLogger
 from protopulse.network.parser.BooleanByteWrapper import boolByteWrapper
 from protopulse.network.parser.ProtocolSpec import FieldSpec, ProtocolSpec
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class NetworkMessageClassDefinition:

@@ -15,32 +15,12 @@
                     "typename": ""
                 }
             ], 
-            "hash_function": false, 
             "name": "GameMessageX", 
             "package": "messages.GameMessageX", 
             "parent": null, 
             "protocolId": 2
         }
     },
-    "primitives": [
-        "UnsignedInt", 
-        "VarShort", 
-        "Byte", 
-        "ByteArray", 
-        "Double", 
-        "Float", 
-        "VarUhInt", 
-        "VarUhLong", 
-        "UnsignedShort", 
-        "UnsignedByte", 
-        "Int", 
-        "VarLong", 
-        "VarUhShort", 
-        "Short", 
-        "VarInt", 
-        "UTF", 
-        "Boolean"
-    ],
     "type": {
         "AbstractCharacterInformation": {
             "boolfields": [], 
@@ -56,7 +36,6 @@
                     "typename": "int"
                 }
             ], 
-            "hash_function": false, 
             "name": "", 
             "package": "", 
             "parent": null, 
@@ -76,39 +55,8 @@
                     "type": "VarUhInt", 
                     "typeId": 12, 
                     "typename": "int"
-                }, 
-                {
-                    "dynamicType": false, 
-                    "length": null, 
-                    "lengthTypeId": null, 
-                    "name": "gfxId", 
-                    "optional": false, 
-                    "type": "VarUhInt", 
-                    "typeId": 12, 
-                    "typename": "int"
-                }, 
-                {
-                    "dynamicType": false, 
-                    "length": null, 
-                    "lengthTypeId": null, 
-                    "name": "modifiable", 
-                    "optional": false, 
-                    "type": "Boolean", 
-                    "typeId": 8, 
-                    "typename": "bool"
-                }, 
-                {
-                    "dynamicType": false, 
-                    "length": null, 
-                    "lengthTypeId": 6, 
-                    "name": "rights", 
-                    "optional": false, 
-                    "type": "VarInt", 
-                    "typeId": 5, 
-                    "typename": "int"
                 }
             ], 
-            "hash_function": false, 
             "name": "", 
             "package": "", 
             "parent": "", 

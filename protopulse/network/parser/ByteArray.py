@@ -5,6 +5,25 @@ from zlib import decompress
 
 
 class ByteArray(bytearray):
+    TYPES_NAMES = [
+        "UnsignedInt", 
+        "VarShort", 
+        "Byte", 
+        "ByteArray", 
+        "Double", 
+        "Float", 
+        "VarUhInt", 
+        "VarUhLong", 
+        "UnsignedShort", 
+        "UnsignedByte", 
+        "Int", 
+        "VarLong", 
+        "VarUhShort", 
+        "Short", 
+        "VarInt", 
+        "UTF", 
+        "Boolean"
+    ]
     INT_SIZE: int = 32
 
     SHORT_SIZE: int = 16

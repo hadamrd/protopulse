@@ -15,7 +15,7 @@ from protopulse.network.messages.ConnectionProcessCrashedMessage import \
     ConnectionProcessCrashedMessage
 from protopulse.network.messages.NetworkMessage import NetworkMessage
 from protopulse.network.parser.MessageParser import MessageParser
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 if TYPE_CHECKING:
     from protopulse.network.messages.INetworkMessage import INetworkMessage

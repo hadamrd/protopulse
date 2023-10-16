@@ -17,7 +17,6 @@ class ClassSpec:
         self.package: str = infos.get("package")
         self.name: str = infos.get("name")
         self.protocolId: int = infos.get("protocolId")
-        self.hash_function: str = infos.get("hash_function")
         self.fields = [FieldSpec(f) for f in infos.get("fields")]
         self.boolfields = [FieldSpec(f) for f in infos.get("boolfields")]
         modulePath = self.package

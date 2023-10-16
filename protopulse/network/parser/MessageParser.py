@@ -3,7 +3,7 @@ import importlib
 from protopulse.metaclasses.Singleton import Singleton
 from protopulse.network.messages.NetworkMessage import NetworkMessage
 from protopulse.network.parser.ProtocolSpec import ProtocolSpec
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class UnknownMessageId(Exception):

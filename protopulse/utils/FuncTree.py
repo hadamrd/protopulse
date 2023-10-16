@@ -1,6 +1,6 @@
 from types import FunctionType
 
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class FuncTree:

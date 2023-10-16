@@ -1,6 +1,6 @@
 from protopulse.network.interfaces.IIdentifiedMessage import IdentifiedMessage
 from protopulse.network.messages.IQueueableMessage import IQueueableMessage
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class INetworkMessage(IdentifiedMessage, IQueueableMessage):

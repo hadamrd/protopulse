@@ -2,7 +2,7 @@ import protopulse.network.parser.NetworkMessageClassDefinition as nmcd
 from protopulse.logger.Logger import TraceLogger
 from protopulse.network.parser.ProtocolSpec import FieldSpec, ProtocolSpec
 from protopulse.network.parser.TypeEnum import TypeEnum
-from protopulse.utils.ByteArray import ByteArray
+from protopulse.network.parser.ByteArray import ByteArray
 
 
 class NetMsgDataField:
