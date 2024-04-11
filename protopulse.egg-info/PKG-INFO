@@ -1,3 +1,36 @@
+Metadata-Version: 2.1
+Name: protopulse
+Version: 0.0.0
+Summary: Library that helps build tcp custom protocols.
+Home-page: https://github.com/hadamrd/protopulse
+Author: MAJDOUB Khalid
+Author-email: majdoub.khalid@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+
+# Introducing ProtoGamerNet
+## What is protopulse?
+
+Protopulse is a tailored Python TCP protocol creator designed explicitly with game developers in mind. 
+It streamlines the intricate process of message serialization and reserialization, enabling developers to define the specifications of various protocol messages in a simple JSON format. With just one command line, these specifications are transformed into data classes, offering auto-completion features and ensuring an intuitive development process.
+
+## Key Features:
+
+** Protocol Specification with JSON: Define the essence of your game messages.
+** Automatic Data Class Generation: Equip your game with self-generated data classes for each protocol message.
+** Server Module Integration: Once messages are sent using the generated protocol, they are efficiently deserialized and transformed ** into their respective Python classes, ready for processing.
+** Worker Module: Register and run 'Frames' on your messages, organizing your game code with priority, push and pull methods.
+** KernelEvents Manager: A state-of-the-art event management system. Register events, dispatch them, and effortlessly attach callbacks.
+
+## General message structure parsable by protopulse engine
+
+## Spec structure by example
+This an example of the protocl spec file you should define to be able to then transform it into python Message classes.
+```json
 {
     "date": "Mon, 25 Sep 2023 12:46:34 +0000",
     "msg_by_id": {
@@ -84,3 +117,6 @@
     ],
     "version": "1.0.3+7dfcc24"
 }
+```
+
+

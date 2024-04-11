@@ -12,9 +12,7 @@ class UnknownMessageId(Exception):
 
 class MessageParser(metaclass=Singleton):
 
-    def __init__(self, optimise=True):
-        self.infight = False
-        self.discard = optimise
+    def __init__(self):
         self.msgLenLen = None
         self.msgLen = None
         self.msgId = None

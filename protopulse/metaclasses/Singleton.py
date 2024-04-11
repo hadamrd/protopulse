@@ -2,7 +2,7 @@ import threading
 from enum import Enum
 from typing import List, Tuple, Type, TypeVar
 
-from protopulse.events.EventsHandler import Event, EventsHandler
+from eventique.EventsHandler import Event, EventsHandler
 from protopulse.logger.Logger import Logger
 
 LOCK = threading.Lock()

@@ -2,6 +2,8 @@ from enum import Enum, auto
 
 
 class KernelEvent(Enum):
+    # The following set of events ids is an illustration of the events that can be used in the KernelEventsManager
+    
     # Common
     ReloginToken = auto()
     MovementRequestRejected = auto()

@@ -48,23 +48,6 @@ class NetworkMessage(INetworkMessage):
     def unpacked(self, value: bool) -> None:
         self._unpacked = value
 
-    def writePacket(self, output: ByteArray, id: int, data: ByteArray) -> None:
-        typeLen: int = len(self.computeTypeLen(data))
-        output.writeShort(self.subComputeStaticHeader(id, typeLen))
-        output.writeUnsignedInt(self._instance_id)
-        if typeLen == 0:
-            return
-        elif typeLen == 1:
-            output.writeByte(len(data))
-        elif typeLen == 2:
-            output.writeShort(len(data))
-        elif typeLen == 3:
-            high = len(data) >> 16 & 255
-            low = len(data) & 65535
-            output.writeByte(high)
-            output.writeShort(low)
-        output.writeByteArray(data, 0, len(data))
-
     def getMessageId(self) -> int:
         return ProtocolSpec.getProtocolIdByName(self.__class__.__name__)
 

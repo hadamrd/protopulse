@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+protopulse.egg-info/PKG-INFO
+protopulse.egg-info/SOURCES.txt
+protopulse.egg-info/dependency_links.txt
+protopulse.egg-info/requires.txt
+protopulse.egg-info/top_level.txt

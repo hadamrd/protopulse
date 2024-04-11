@@ -1,7 +1,8 @@
 from time import perf_counter
 
-from protopulse.events.EventsHandler import Event, EventsHandler, Listener
-from protopulse.events.KernelEvent import KernelEvent
+from eventique.EventsHandler import Event, EventsHandler
+from eventique.Listener import Listener
+from .KernelEvent import KernelEvent
 from protopulse.metaclasses.Singleton import Singleton
 
 

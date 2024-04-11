@@ -1,7 +1,8 @@
 # Introducing ProtoGamerNet
 ## What is protopulse?
 
-protopulse is a tailored Python TCP protocol creator designed explicitly with game developers in mind. It streamlines the intricate process of message serialization and reserialization, enabling developers to define the specifications of various protocol messages in a simple JSON format. With just one command line, these specifications are transformed into data classes, offering auto-completion features and ensuring an intuitive development process.
+Protopulse is a tailored Python TCP protocol creator designed explicitly with game developers in mind. 
+It streamlines the intricate process of message serialization and reserialization, enabling developers to define the specifications of various protocol messages in a simple JSON format. With just one command line, these specifications are transformed into data classes, offering auto-completion features and ensuring an intuitive development process.
 
 ## Key Features:
 
@@ -10,3 +11,96 @@ protopulse is a tailored Python TCP protocol creator designed explicitly with ga
 ** Server Module Integration: Once messages are sent using the generated protocol, they are efficiently deserialized and transformed ** into their respective Python classes, ready for processing.
 ** Worker Module: Register and run 'Frames' on your messages, organizing your game code with priority, push and pull methods.
 ** KernelEvents Manager: A state-of-the-art event management system. Register events, dispatch them, and effortlessly attach callbacks.
+
+## General message structure parsable by protopulse engine
+
+## Spec structure by example
+This an example of the protocl spec file you should define to be able to then transform it into python Message classes.
+```json
+{
+    "date": "Mon, 25 Sep 2023 12:46:34 +0000",
+    "msg_by_id": {
+        "2": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "spell", 
+                    "optional": false, 
+                    "type": "", 
+                    "typeId": -1, 
+                    "typename": ""
+                }
+            ], 
+            "name": "GameMessageX", 
+            "package": "messages.GameMessageX", 
+            "parent": null, 
+            "protocolId": 2
+        }
+    },
+    "type": {
+        "AbstractCharacterInformation": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "id", 
+                    "optional": false, 
+                    "type": "VarUhLong", 
+                    "typeId": 7, 
+                    "typename": "int"
+                }
+            ], 
+            "name": "", 
+            "package": "", 
+            "parent": null, 
+            "protocolId": 2111
+        }
+    },
+    "type_by_id": {
+        "15": {
+            "boolfields": [], 
+            "fields": [
+                {
+                    "dynamicType": false, 
+                    "length": null, 
+                    "lengthTypeId": null, 
+                    "name": "order", 
+                    "optional": false, 
+                    "type": "VarUhInt", 
+                    "typeId": 12, 
+                    "typename": "int"
+                }
+            ], 
+            "name": "", 
+            "package": "", 
+            "parent": "", 
+            "protocolId": 15
+        }
+    },
+    "primitives": [
+        "Short", 
+        "UTF", 
+        "UnsignedInt", 
+        "VarUhInt", 
+        "ByteArray", 
+        "Float", 
+        "VarLong", 
+        "UnsignedByte", 
+        "Byte", 
+        "VarUhLong", 
+        "UnsignedShort", 
+        "VarShort", 
+        "VarUhShort", 
+        "Int", 
+        "VarInt", 
+        "Double", 
+        "Boolean"
+    ],
+    "version": "1.0.3+7dfcc24"
+}
+```
